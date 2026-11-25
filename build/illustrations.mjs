@@ -2,27 +2,64 @@ import { REGION_MAP } from './stories.mjs';
 
 export function renderArt(key) {
   switch (key) {
+    case 'huawei':
+      return `<svg viewBox="0 0 316 98" width="100%" height="98" xmlns="http://www.w3.org/2000/svg">
+        <rect width="316" height="98" fill="#182234"/>
+        <!-- Courthouse columns subtle backdrop -->
+        <g fill="#24334C">
+          <rect x="14" y="24" width="12" height="74"/>
+          <rect x="34" y="24" width="12" height="74"/>
+          <rect x="54" y="24" width="12" height="74"/>
+          <rect x="74" y="24" width="12" height="74"/>
+          <polygon points="8,24 92,24 50,8"/>
+        </g>
+        <!-- Wooden Gavel -->
+        <g transform="translate(36,42) rotate(-25)">
+          <rect x="0" y="0" width="38" height="14" rx="2.5" fill="#D97706" stroke="#FEF3C7" stroke-width="1"/>
+          <rect x="15" y="14" width="7" height="34" rx="2" fill="#B45309"/>
+        </g>
+        <!-- Verdict scorecard on right -->
+        <rect x="108" y="8" width="198" height="82" rx="3" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+        <text x="118" y="24" font-family="Segoe UI, Arial, sans-serif" font-size="8.2" font-weight="800" fill="#94A3B8" letter-spacing="0.6">BROOKLYN FEDERAL JURY</text>
+        <text x="118" y="45" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#FFFFFF">10 / 12 GUILTY</text>
+        <!-- 12 verdict dots: 10 crimson guilty, 2 slate acquitted -->
+        <g transform="translate(118,54)">
+          <rect x="0" y="0" width="12" height="9" rx="1.5" fill="#DC2626"/>
+          <rect x="15" y="0" width="12" height="9" rx="1.5" fill="#DC2626"/>
+          <rect x="30" y="0" width="12" height="9" rx="1.5" fill="#DC2626"/>
+          <rect x="45" y="0" width="12" height="9" rx="1.5" fill="#DC2626"/>
+          <rect x="60" y="0" width="12" height="9" rx="1.5" fill="#DC2626"/>
+          <rect x="75" y="0" width="12" height="9" rx="1.5" fill="#DC2626"/>
+          <rect x="90" y="0" width="12" height="9" rx="1.5" fill="#DC2626"/>
+          <rect x="105" y="0" width="12" height="9" rx="1.5" fill="#DC2626"/>
+          <rect x="120" y="0" width="12" height="9" rx="1.5" fill="#DC2626"/>
+          <rect x="135" y="0" width="12" height="9" rx="1.5" fill="#DC2626"/>
+          <rect x="150" y="0" width="12" height="9" rx="1.5" fill="#475569" stroke="#94A3B8" stroke-width="0.8"/>
+          <rect x="165" y="0" width="12" height="9" rx="1.5" fill="#475569" stroke="#94A3B8" stroke-width="0.8"/>
+        </g>
+        <text x="118" y="74" font-family="Segoe UI, Arial, sans-serif" font-size="7.6" font-weight="700" fill="#FCA5A5">FRAUD · IRAN SANCTIONS · TRADE SECRETS</text>
+        <text x="118" y="84" font-family="Segoe UI, Arial, sans-serif" font-size="7.3" font-weight="700" fill="#93C5FD">ACQUITTED: RICO &amp; OBSTRUCTION (2)</text>
+        <!-- Top-left badge -->
+        <rect x="0" y="0" width="98" height="18" fill="#A61C1C"/>
+        <text x="7" y="12.5" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF">HUAWEI VERDICT</text>
+      </svg>`;
+
     case 'markets':
       return `<svg viewBox="0 0 316 98" width="100%" height="98" xmlns="http://www.w3.org/2000/svg">
         <rect width="316" height="98" fill="#0F1C2E"/>
-        <!-- Subtle chart grid -->
         <g stroke="#243B55" stroke-width="0.7" stroke-dasharray="2 2">
           <line x1="12" y1="26" x2="210" y2="26"/>
           <line x1="12" y1="48" x2="210" y2="48"/>
           <line x1="12" y1="70" x2="210" y2="70"/>
         </g>
-        <!-- TAIEX soaring area + line -->
         <polygon points="14,76 48,70 84,62 120,42 158,28 202,20 202,80 14,80" fill="#10B981" opacity="0.22"/>
         <polyline points="14,76 48,70 84,62 120,42 158,28 202,20" fill="none" stroke="#34D399" stroke-width="2.6" stroke-linejoin="round"/>
         <circle cx="202" cy="20" r="3.5" fill="#34D399"/>
-        <!-- KOSPI line -->
         <polyline points="14,78 52,74 90,66 130,52 168,40 202,34" fill="none" stroke="#38BDF8" stroke-width="2.1" stroke-linejoin="round"/>
         <circle cx="202" cy="34" r="3" fill="#38BDF8"/>
-        <!-- Labels on chart -->
         <text x="16" y="34" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#6EE7B7">TAIEX ~+9%</text>
         <text x="16" y="47" font-family="Segoe UI, Arial, sans-serif" font-size="9" font-weight="800" fill="#7DD3FC">KOSPI &gt;5,000 (+7%)</text>
         <text x="16" y="60" font-family="Segoe UI, Arial, sans-serif" font-size="8" font-weight="700" fill="#FCA5A5">NASDAQ −1.48%</text>
-        <!-- Right panel: Dow 50K + Sanofi $41B -->
         <rect x="214" y="0" width="102" height="98" fill="#162942"/>
         <line x1="214" y1="0" x2="214" y2="98" stroke="#334E68" stroke-width="1"/>
         <rect x="220" y="7" width="90" height="39" rx="3" fill="#065F46" stroke="#34D399" stroke-width="1"/>
@@ -31,7 +68,6 @@ export function renderArt(key) {
         <rect x="220" y="52" width="90" height="39" rx="3" fill="#4C1D95" stroke="#A78BFA" stroke-width="1"/>
         <text x="265" y="65" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.3" font-weight="800" fill="#DDD6FE">SANOFI–INSMED</text>
         <text x="265" y="83" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#FFFFFF">$41B</text>
-        <!-- Top-left crimson/emerald badge -->
         <rect x="0" y="0" width="136" height="18" fill="#047857"/>
         <text x="7" y="12.5" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF">ASIA CHIP RALLY</text>
       </svg>`;
@@ -39,83 +75,50 @@ export function renderArt(key) {
     case 'hormuz':
       return `<svg viewBox="0 0 316 98" width="100%" height="98" xmlns="http://www.w3.org/2000/svg">
         <rect width="316" height="98" fill="#CBE0EE"/>
-        <!-- Iran (north) -->
         <path d="M0,0 L316,0 L316,41 L268,43 L235,32 L196,39 L152,30 L106,37 L52,25 L0,28 Z" fill="#E3D4B7" stroke="#A69578" stroke-width="1"/>
-        <!-- Saudi / Arabian peninsula & Oman (south) -->
         <path d="M0,56 L58,64 L92,78 L138,76 L176,66 L212,54 L232,58 L244,82 L274,98 L0,98 Z" fill="#E8DCC3" stroke="#A69578" stroke-width="1"/>
-        <!-- Riyadh PIF Tower strike icon on left -->
-        <g transform="translate(22,60)">
+        <!-- Riyadh PIF Tower strike -->
+        <g transform="translate(18,60)">
           <rect x="0" y="6" width="12" height="28" fill="#475569"/>
           <rect x="14" y="13" width="9" height="21" fill="#64748B"/>
           <polygon points="8,1 11,8 18,7 12,12 16,17 9,15 6,20 4,13 -2,12 4,8" fill="#D9480F"/>
           <circle cx="8" cy="10" r="3" fill="#FFD43B"/>
         </g>
-        <text x="49" y="75" font-family="Segoe UI, Arial, sans-serif" font-size="8.2" font-weight="800" fill="#7F1D1D">RIYADH</text>
-        <text x="49" y="85" font-family="Segoe UI, Arial, sans-serif" font-size="7.3" font-weight="700" fill="#991B1B">11 HURT</text>
-        <!-- Shipping lane -->
+        <text x="45" y="75" font-family="Segoe UI, Arial, sans-serif" font-size="8.2" font-weight="800" fill="#7F1D1D">RIYADH</text>
+        <text x="45" y="85" font-family="Segoe UI, Arial, sans-serif" font-size="7.3" font-weight="700" fill="#991B1B">11 HURT</text>
         <path d="M88,48 Q154,54 206,45 T306,62" fill="none" stroke="#1E4E79" stroke-width="1.3" stroke-dasharray="4 3" opacity="0.55"/>
-        <!-- 3 Tankers ablaze -->
-        <g transform="translate(114,41)">
-          <path d="M0,9 L32,9 L36,4 L4,4 Z" fill="#233142"/>
-          <path d="M15,4 C13,-4 19,-8 21,-1 C24,-6 26,-1 24,4 Z" fill="#D9480F"/>
-          <path d="M17,4 C17,0 20,-2 22,4 Z" fill="#FFD43B"/>
+        <!-- 4 Tankers claimed mined -->
+        <g transform="translate(102,42)">
+          <path d="M0,8 L28,8 L31,4 L3,4 Z" fill="#233142"/>
+          <path d="M13,4 C11,-3 16,-7 18,-1 C20,-5 22,-1 20,4 Z" fill="#D9480F"/>
+          <path d="M14,4 C14,0 17,-2 18,4 Z" fill="#FFD43B"/>
         </g>
-        <g transform="translate(174,36)">
-          <path d="M0,9 L32,9 L36,4 L4,4 Z" fill="#233142"/>
-          <path d="M12,4 C10,-4 16,-8 18,-1 C21,-6 23,-1 21,4 Z" fill="#C92A2A"/>
-          <path d="M14,4 C14,0 17,-2 19,4 Z" fill="#FCC419"/>
+        <g transform="translate(152,37)">
+          <path d="M0,8 L28,8 L31,4 L3,4 Z" fill="#233142"/>
+          <path d="M11,4 C9,-3 14,-7 16,-1 C18,-5 20,-1 18,4 Z" fill="#C92A2A"/>
+          <path d="M12,4 C12,0 15,-2 16,4 Z" fill="#FCC419"/>
         </g>
-        <g transform="translate(238,49)">
-          <path d="M0,9 L32,9 L36,4 L4,4 Z" fill="#233142"/>
-          <path d="M16,4 C14,-3 20,-7 22,-1 C25,-5 27,-1 25,4 Z" fill="#D9480F"/>
-          <path d="M18,4 C18,0 21,-2 23,4 Z" fill="#FFD43B"/>
+        <g transform="translate(204,40)">
+          <path d="M0,8 L28,8 L31,4 L3,4 Z" fill="#233142"/>
+          <path d="M13,4 C11,-3 16,-7 18,-1 C20,-5 22,-1 20,4 Z" fill="#D9480F"/>
+          <path d="M14,4 C14,0 17,-2 18,4 Z" fill="#FFD43B"/>
+        </g>
+        <g transform="translate(256,51)">
+          <path d="M0,8 L28,8 L31,4 L3,4 Z" fill="#233142"/>
+          <path d="M13,4 C11,-3 16,-7 18,-1 C20,-5 22,-1 20,4 Z" fill="#C92A2A"/>
+          <path d="M14,4 C14,0 17,-2 18,4 Z" fill="#FFD43B"/>
         </g>
         <text x="256" y="19" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="800" fill="#6B5B45" letter-spacing="1.4">IRAN</text>
-        <text x="150" y="72" font-family="Segoe UI, Arial, sans-serif" font-size="7.8" font-weight="700" fill="#1E4E79">STRAIT OF HORMUZ</text>
-        <rect x="0" y="0" width="134" height="18" fill="#A61C1C"/>
-        <text x="7" y="12.5" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF">3 TANKERS · RIYADH</text>
+        <text x="148" y="72" font-family="Segoe UI, Arial, sans-serif" font-size="7.8" font-weight="700" fill="#1E4E79">STRAIT OF HORMUZ</text>
+        <rect x="0" y="0" width="150" height="18" fill="#A61C1C"/>
+        <text x="7" y="12.5" font-family="Segoe UI, Arial, sans-serif" font-size="9.2" font-weight="800" fill="#FFFFFF">4 TANKERS CLAIMED</text>
         <rect x="170" y="79" width="146" height="19" fill="#1E3A5F"/>
         <text x="243" y="92" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8.8" font-weight="700" fill="#FFFFFF">QATAR PM AT WHITE HOUSE</text>
-      </svg>`;
-
-    case 'zaporizhzhia':
-      return `<svg viewBox="0 0 316 98" width="100%" height="98" xmlns="http://www.w3.org/2000/svg">
-        <!-- Left half: Zaporizhzhia strike -->
-        <rect width="166" height="98" fill="#1E2D40"/>
-        <rect x="12" y="40" width="34" height="58" fill="#334155"/>
-        <rect x="52" y="30" width="50" height="68" fill="#475569"/>
-        <rect x="108" y="46" width="42" height="52" fill="#334155"/>
-        <g fill="#FDE68A" opacity="0.85">
-          <rect x="18" y="48" width="5" height="6"/><rect x="29" y="48" width="5" height="6"/>
-          <rect x="59" y="39" width="6" height="7"/><rect x="71" y="39" width="6" height="7"/>
-          <rect x="115" y="54" width="5" height="6"/><rect x="130" y="66" width="5" height="6"/>
-        </g>
-        <polygon points="82,24 89,37 104,33 94,46 108,54 91,56 88,69 80,56 66,60 75,48 64,37 78,39" fill="#E8590C"/>
-        <polygon points="83,33 88,42 97,40 91,48 97,54 88,53 84,60 80,52 73,54 78,47 74,40 81,42" fill="#FFD43B"/>
-        <!-- Right half: Poland 20 km drone + Magyar-Zelenskyy -->
-        <rect x="166" y="0" width="150" height="98" fill="#EAE4D6"/>
-        <line x1="166" y1="0" x2="166" y2="98" stroke="#1A1D24" stroke-width="1.5"/>
-        <!-- Poland border dashed line & drone track -->
-        <line x1="226" y1="10" x2="226" y2="74" stroke="#991B1B" stroke-width="1.4" stroke-dasharray="3 2"/>
-        <text x="196" y="21" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8.2" font-weight="800" fill="#1E3A5F">POLAND</text>
-        <text x="272" y="21" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8.2" font-weight="800" fill="#1E4E79">UKRAINE</text>
-        <!-- Drone incursion loop 20 km -->
-        <path d="M286,44 Q212,26 196,44 Q212,62 282,52" fill="none" stroke="#C92A2A" stroke-width="2" stroke-dasharray="4 2"/>
-        <polygon points="194,44 204,39 202,44 204,49" fill="#C92A2A"/>
-        <rect x="174" y="57" width="134" height="17" rx="2" fill="#FFF5F5" stroke="#B91C1C" stroke-width="0.9"/>
-        <text x="241" y="68.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.8" font-weight="800" fill="#991B1B">20 KM POLISH INCURSION</text>
-        <!-- Top-left crimson banner -->
-        <rect x="0" y="0" width="122" height="18" fill="#A61C1C"/>
-        <text x="7" y="12.5" font-family="Segoe UI, Arial, sans-serif" font-size="9.5" font-weight="800" fill="#FFFFFF">2 DEAD · 40+ HURT</text>
-        <!-- Bottom-right diplomacy bar -->
-        <rect x="172" y="79" width="138" height="16" rx="2" fill="#1E4E79"/>
-        <text x="241" y="90" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="8.2" font-weight="800" fill="#FFFFFF">MAGYAR VISITS ZELENSKYY</text>
       </svg>`;
 
     case 'chen':
       return `<svg viewBox="0 0 186 50" width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
         <rect width="186" height="50" fill="#2A1215"/>
-        <!-- Shanghai skyline silhouette -->
         <g fill="#5C2227">
           <rect x="8" y="26" width="12" height="24"/>
           <rect x="23" y="18" width="11" height="32"/>
@@ -130,14 +133,33 @@ export function renderArt(key) {
         <text x="126" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.6" font-weight="700" fill="#FCA5A5">4TH POLITBURO PURGE</text>
       </svg>`;
 
+    case 'ukraine':
+      return `<svg viewBox="0 0 186 50" width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
+        <rect width="92" height="50" fill="#1E2D40"/>
+        <rect x="8" y="22" width="18" height="28" fill="#334155"/>
+        <rect x="30" y="16" width="28" height="34" fill="#475569"/>
+        <rect x="62" y="24" width="22" height="26" fill="#334155"/>
+        <polygon points="44,12 48,20 57,18 51,25 58,31 48,31 45,38 41,31 33,33 38,26 32,19 41,20" fill="#E8590C"/>
+        <circle cx="44" cy="25" r="4" fill="#FFD43B"/>
+        <rect x="92" y="0" width="94" height="50" fill="#EAE4D6"/>
+        <line x1="92" y1="0" x2="92" y2="50" stroke="#1A1D24" stroke-width="1"/>
+        <line x1="128" y1="5" x2="128" y2="33" stroke="#991B1B" stroke-width="1.2" stroke-dasharray="2.5 2"/>
+        <path d="M174,18 Q120,8 108,19 Q120,30 172,24" fill="none" stroke="#C92A2A" stroke-width="1.6" stroke-dasharray="3 2"/>
+        <polygon points="106,19 114,15 113,19 114,23" fill="#C92A2A"/>
+        <text x="110" y="11" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="6.8" font-weight="800" fill="#1E3A5F">POLAND</text>
+        <text x="158" y="11" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="6.8" font-weight="800" fill="#1E4E79">UKRAINE</text>
+        <rect x="96" y="34" width="86" height="13" rx="1.5" fill="#1E4E79"/>
+        <text x="139" y="43" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="6.8" font-weight="800" fill="#FFFFFF">20 KM · MAGYAR</text>
+        <rect x="0" y="0" width="80" height="13" fill="#A61C1C"/>
+        <text x="4" y="9.5" font-family="Segoe UI, Arial, sans-serif" font-size="7.2" font-weight="800" fill="#FFFFFF">2 DEAD · 40+ HURT</text>
+      </svg>`;
+
     case 'senegal':
       return `<svg viewBox="0 0 186 50" width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
         <rect width="186" height="50" fill="#ECFDF5"/>
-        <!-- Senegal vertical flag bar -->
         <rect x="0" y="0" width="8" height="50" fill="#15803D"/>
         <rect x="8" y="0" width="8" height="50" fill="#FACC15"/>
         <rect x="16" y="0" width="8" height="50" fill="#DC2626"/>
-        <!-- Trophy icon -->
         <g transform="translate(34,7)">
           <path d="M6,2 L26,2 L24,18 C24,24 19,27 16,27 C13,27 8,24 8,18 Z" fill="#D97706" stroke="#92400E" stroke-width="1.2"/>
           <path d="M6,6 C0,6 0,16 7,17" fill="none" stroke="#D97706" stroke-width="2.2"/>
@@ -151,24 +173,21 @@ export function renderArt(key) {
         <text x="128" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.6" font-weight="700" fill="#475569">SENEGAL 1–0 MOROCCO</text>
       </svg>`;
 
-    case 'solomon':
+    case 'ukheat':
       return `<svg viewBox="0 0 186 50" width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
-        <rect width="186" height="50" fill="#D4E8F2"/>
-        <path d="M8,22 L38,18 L58,28 L52,48 L12,48 Z" fill="#E4D6BA" stroke="#9C8D71" stroke-width="0.9"/>
-        <text x="32" y="39" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.3" font-weight="800" fill="#5C4F3D">AUS</text>
-        <g fill="#0E7490">
-          <ellipse cx="96" cy="24" rx="7" ry="3" transform="rotate(20 96 24)"/>
-          <ellipse cx="109" cy="29" rx="6" ry="2.5" transform="rotate(20 109 29)"/>
-        </g>
-        <path d="M52,33 Q76,40 98,27" fill="none" stroke="#0E7490" stroke-width="2.5"/>
-        <path d="M104,22 Q118,10 144,8" fill="none" stroke="#A61C1C" stroke-width="1.6" stroke-dasharray="3 2"/>
-        <g transform="translate(120,12)" stroke="#A61C1C" stroke-width="2.2">
-          <line x1="-4" y1="-4" x2="4" y2="4"/><line x1="4" y1="-4" x2="-4" y2="4"/>
-        </g>
-        <rect x="116" y="29" width="66" height="16" rx="2" fill="#0E7490"/>
-        <text x="149" y="40" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.5" font-weight="800" fill="#FFFFFF">CANBERRA PACT</text>
-        <rect x="0" y="0" width="84" height="14" fill="#A61C1C"/>
-        <text x="5" y="10" font-family="Segoe UI, Arial, sans-serif" font-size="7.5" font-weight="800" fill="#FFFFFF">CHINA PACT ENDS</text>
+        <rect width="186" height="50" fill="#FFF7ED"/>
+        <line x1="12" y1="40" x2="108" y2="40" stroke="#9A3412" stroke-width="1"/>
+        <rect x="15" y="32" width="10" height="8" fill="#CBD5E1"/>
+        <rect x="29" y="28" width="10" height="12" fill="#CBD5E1"/>
+        <rect x="43" y="20" width="10" height="20" fill="#94A3B8"/>
+        <rect x="57" y="26" width="10" height="14" fill="#CBD5E1"/>
+        <rect x="71" y="22" width="10" height="18" fill="#94A3B8"/>
+        <rect x="85" y="6" width="14" height="34" fill="#C92A2A"/>
+        <text x="48" y="47.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="6.8" fill="#64748B">'22</text>
+        <text x="92" y="47.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.4" font-weight="800" fill="#C92A2A">'26</text>
+        <text x="110" y="23" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#B91C1C">5,258</text>
+        <text x="110" y="34" font-family="Segoe UI, Arial, sans-serif" font-size="7.8" font-weight="800" fill="#9A3412">HEAT DEATHS</text>
+        <text x="110" y="44" font-family="Segoe UI, Arial, sans-serif" font-size="7.3" font-weight="700" fill="#64748B">41 HOT DAYS</text>
       </svg>`;
 
     case 'euclid':
@@ -193,23 +212,6 @@ export function renderArt(key) {
         <text x="180" y="45" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="7.8" font-weight="700" fill="#93C5FD">630M YRS</text>
       </svg>`;
 
-    case 'ukheat':
-      return `<svg viewBox="0 0 186 50" width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
-        <rect width="186" height="50" fill="#FFF7ED"/>
-        <line x1="12" y1="40" x2="108" y2="40" stroke="#9A3412" stroke-width="1"/>
-        <rect x="15" y="32" width="10" height="8" fill="#CBD5E1"/>
-        <rect x="29" y="28" width="10" height="12" fill="#CBD5E1"/>
-        <rect x="43" y="20" width="10" height="20" fill="#94A3B8"/>
-        <rect x="57" y="26" width="10" height="14" fill="#CBD5E1"/>
-        <rect x="71" y="22" width="10" height="18" fill="#94A3B8"/>
-        <rect x="85" y="6" width="14" height="34" fill="#C92A2A"/>
-        <text x="48" y="47.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="6.8" fill="#64748B">'22</text>
-        <text x="92" y="47.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.4" font-weight="800" fill="#C92A2A">'26</text>
-        <text x="110" y="23" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#B91C1C">5,258</text>
-        <text x="110" y="34" font-family="Segoe UI, Arial, sans-serif" font-size="7.8" font-weight="800" fill="#9A3412">HEAT DEATHS</text>
-        <text x="110" y="44" font-family="Segoe UI, Arial, sans-serif" font-size="7.3" font-weight="700" fill="#64748B">41 HOT DAYS</text>
-      </svg>`;
-
     case 'ebola':
       return `<svg viewBox="0 0 186 50" width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
         <rect width="186" height="50" fill="#ECFDF5"/>
@@ -229,21 +231,38 @@ export function renderArt(key) {
         <text x="96" y="45" font-family="Segoe UI, Arial, sans-serif" font-size="7.4" font-weight="700" fill="#475569">DOSES · DRC</text>
       </svg>`;
 
+    case 'sarkozy':
+      return `<svg viewBox="0 0 186 50" width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
+        <rect width="186" height="50" fill="#F8FAFC"/>
+        <!-- French tricolour bar -->
+        <rect x="0" y="0" width="7" height="50" fill="#1D4ED8"/>
+        <rect x="7" y="0" width="7" height="50" fill="#FFFFFF"/>
+        <rect x="14" y="0" width="7" height="50" fill="#DC2626"/>
+        <!-- Scales of justice icon -->
+        <g transform="translate(32,10)" stroke="#1E3A5F" stroke-width="1.6" fill="none">
+          <line x1="16" y1="2" x2="16" y2="30"/>
+          <line x1="4" y1="8" x2="28" y2="8"/>
+          <path d="M4,8 L0,18 L8,18 Z" fill="#CBD5E1"/>
+          <path d="M28,8 L24,18 L32,18 Z" fill="#CBD5E1"/>
+          <line x1="9" y1="30" x2="23" y2="30"/>
+        </g>
+        <rect x="76" y="5" width="104" height="15" rx="2" fill="#1E3A5F"/>
+        <text x="128" y="15.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.8" font-weight="800" fill="#FFFFFF">PARIS CRIMINAL COURT</text>
+        <text x="128" y="33" text-anchor="middle" font-family="Georgia, serif" font-size="11.5" font-weight="700" fill="#0F172A">2027 TRIAL</text>
+        <text x="128" y="44" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.3" font-weight="700" fill="#64748B">WITNESS-TAMPERING CASE</text>
+      </svg>`;
+
     case 'hasina':
       return `<svg viewBox="0 0 186 50" width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
         <rect width="186" height="50" fill="#F8FAFC"/>
-        <!-- Bangladesh subtle color bar -->
         <rect x="0" y="0" width="8" height="50" fill="#006A4E"/>
         <circle cx="4" cy="25" r="2.6" fill="#F42A41"/>
-        <!-- Delhi to Dhaka flight arc -->
         <circle cx="28" cy="34" r="3.5" fill="#1E4E79"/>
         <text x="28" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.4" font-weight="800" fill="#1E3A5F">DELHI</text>
         <circle cx="106" cy="34" r="3.5" fill="#B91C1C"/>
         <text x="106" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.4" font-weight="800" fill="#991B1B">DHAKA</text>
         <path d="M31,32 Q68,8 103,32" fill="none" stroke="#1E4E79" stroke-width="1.8" stroke-dasharray="3 2"/>
-        <!-- Plane silhouette -->
         <polygon points="73,19 64,16 66,20 64,24" fill="#1E4E79"/>
-        <!-- Stamp -->
         <rect x="118" y="7" width="64" height="36" rx="3" fill="#FFF5F5" stroke="#B91C1C" stroke-width="1.4"/>
         <text x="150" y="21" text-anchor="middle" font-family="Georgia, serif" font-size="11.5" font-weight="700" fill="#991B1B">DEC 16</text>
         <text x="150" y="31.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.2" font-weight="800" fill="#B91C1C">DHAKA</text>
@@ -268,10 +287,8 @@ export function renderArt(key) {
     case 'ucl':
       return `<svg viewBox="0 0 186 50" width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
         <rect width="186" height="50" fill="#155E34"/>
-        <!-- Subtle pitch markings -->
         <line x1="93" y1="0" x2="93" y2="50" stroke="#FFFFFF" stroke-width="0.8" opacity="0.25"/>
         <circle cx="93" cy="25" r="14" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.25"/>
-        <!-- Scoreboard -->
         <rect x="8" y="5" width="170" height="40" rx="3" fill="#0F172A" fill-opacity="0.88" stroke="#94A3B8" stroke-width="0.8"/>
         <text x="16" y="17" font-family="Segoe UI, Arial, sans-serif" font-size="8.4" font-weight="800" fill="#FDE047">REAL MADRID</text>
         <text x="170" y="17" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="8.8" font-weight="800" fill="#FFFFFF">5–1 PSV</text>
@@ -279,21 +296,6 @@ export function renderArt(key) {
         <text x="170" y="29" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="8.4" font-weight="700" fill="#CBD5E1">1–1 BVB</text>
         <text x="16" y="41" font-family="Segoe UI, Arial, sans-serif" font-size="8.2" font-weight="700" fill="#7DD3FC">MAN CITY</text>
         <text x="170" y="41" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="8.4" font-weight="700" fill="#CBD5E1">2–2 NAPOLI</text>
-      </svg>`;
-
-    case 'colombia':
-      return `<svg viewBox="0 0 186 50" width="100%" height="50" xmlns="http://www.w3.org/2000/svg">
-        <rect width="186" height="50" fill="#F8FAFC"/>
-        <rect x="0" y="0" width="10" height="25" fill="#FACC15"/>
-        <rect x="0" y="25" width="10" height="12.5" fill="#1D4ED8"/>
-        <rect x="0" y="37.5" width="10" height="12.5" fill="#DC2626"/>
-        <line x1="24" y1="33" x2="170" y2="33" stroke="#1E3A5F" stroke-width="2.4"/>
-        <circle cx="24" cy="33" r="4.2" fill="#1E3A5F"/>
-        <circle cx="170" cy="33" r="4.2" fill="#B45309"/>
-        <text x="24" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.6" font-weight="800" fill="#1E3A5F">2016</text>
-        <text x="170" y="46" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.6" font-weight="800" fill="#B45309">2026</text>
-        <text x="97" y="19" text-anchor="middle" font-family="Georgia, serif" font-size="14.5" font-weight="700" fill="#1E3A5F">10 YEARS</text>
-        <text x="97" y="28.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="7.4" font-weight="800" fill="#64748B">FARC PEACE ACCORD</text>
       </svg>`;
 
     default:

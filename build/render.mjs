@@ -48,7 +48,7 @@ function buildHtml() {
 
   const regionBarHtml = REGIONS.map((r) => {
     const n = counts[r.id] || 0;
-    return `<div class="reg-seg" style="flex:${n} 1 0;min-width:66px;background:${r.color};">${r.label} <span>${n}</span></div>`;
+    return `<div class="reg-seg" style="flex:${n} 1 0;min-width:62px;background:${r.color};">${r.label} <span>${n}</span></div>`;
   }).join('');
 
   const utcHtml = UTC_EVENTS.map(
@@ -532,10 +532,10 @@ function buildHtml() {
   <header>
     <div class="top-kicker">
       <span class="tk-left">THE WORLD IN ONE DAY</span>
-      <span class="tk-right">${totalStories} STORIES · 7 REGIONS + SPACE · ALL FROM THIS TUESDAY</span>
+      <span class="tk-right">${totalStories} STORIES · 9 REGIONS · 13 DRAWN SCENES · ALL FROM THIS TUESDAY</span>
     </div>
     <div class="masthead"><h1>Tuesday 24 November 2026</h1></div>
-    <div class="deck">Asia chip rally surges as Dow tops 50,000 · China probes Shanghai chief Chen Jining · Hormuz tankers &amp; Riyadh tower hit</div>
+    <div class="deck">U.S. jury convicts Huawei on 10 of 12 counts · Dow tops 50,000 as Sanofi buys Insmed ($41B) · 4th Hormuz tanker claimed &amp; Riyadh hit</div>
   </header>
 
   <section class="utc-bar">

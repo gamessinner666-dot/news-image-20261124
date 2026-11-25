@@ -8,7 +8,7 @@ Entry for the [make.fun "Sum up 24 November's world news in one image" bounty](h
 
 ## Overview
 
-A single-page 1024×1024 editorial broadsheet front page summarizing **37 full-day date-verified world news stories** from **Tuesday 24 November 2026** across 7 geographic regions plus global/space beats (including Asia's chip rally & Dow 50,018, Sanofi's $41B Insmed deal, China's Politburo probe of Chen Jining, Hormuz & Riyadh strikes, Zaporizhzhia & Poland drone incursion, CAS restoring Senegal's AFCON title, ESA Euclid's record quasar, UK's 5,258 heat deaths, and UEFA Champions League MD5 results), with:
+A single-page 1024×1024 editorial broadsheet front page summarizing **37 full-day date-verified world news stories** from **Tuesday 24 November 2026** across **9 world regions** (including Huawei's 10/12 federal guilty verdict, Asia's chip surge & Dow 50,018, Sanofi's $41B Insmed deal, Iran's 4th Hormuz tanker claim & Riyadh strike, China's Politburo probe of Chen Jining, Zaporizhzhia & Poland drone incursion, CAS restoring Senegal's AFCON title, Sarkozy & Carla Bruni's 2027 trial order, Microsoft's "Code Red", Cikande fire toll 26, ESA Euclid's record quasar, UK's 5,258 heat deaths, and UEFA Champions League MD5 results), with:
 
 - **13 original code-drawn SVG editorial graphics** (3 hero lead stories + 10 global beat cards)
 - **UTC day timeline** and **key-numbers bar** for instant visual scanning even at 300px
