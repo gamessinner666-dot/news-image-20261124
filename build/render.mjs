@@ -48,8 +48,7 @@ function buildHtml() {
 
   const regionBarHtml = REGIONS.map((r) => {
     const n = counts[r.id] || 0;
-    const pct = ((n / totalStories) * 100).toFixed(2);
-    return `<div class="reg-seg" style="width:${pct}%;background:${r.color};">${r.label} <span>${n}</span></div>`;
+    return `<div class="reg-seg" style="flex:${n} 1 0;min-width:66px;background:${r.color};">${r.label} <span>${n}</span></div>`;
   }).join('');
 
   const utcHtml = UTC_EVENTS.map(
@@ -429,25 +428,31 @@ function buildHtml() {
   .leg-item { display: inline-flex; align-items: center; gap: 3px; }
   .leg-item i { display: inline-block; width: 6.5px; height: 6.5px; border-radius: 50%; }
 
+  .digest-box {
+    min-width: 0;
+    overflow: hidden;
+  }
   .digest-cols {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 8px;
   }
   .d-col {
     display: flex;
     flex-direction: column;
     gap: 2.2px;
+    min-width: 0;
   }
   .d-row {
     display: flex;
     align-items: center;
     gap: 3.5px;
-    font-size: 8.4px;
+    font-size: 8.3px;
     line-height: 1.18;
     border-bottom: 0.5px dotted #D5CCB9;
     padding-bottom: 2.4px;
     min-height: 15.6px;
+    min-width: 0;
   }
   .d-row:last-child { border-bottom: none; }
   .d-text {
@@ -530,7 +535,7 @@ function buildHtml() {
       <span class="tk-right">${totalStories} STORIES · 7 REGIONS + SPACE · ALL FROM THIS TUESDAY</span>
     </div>
     <div class="masthead"><h1>Tuesday 24 November 2026</h1></div>
-    <div class="deck">Iran says mines hit 3 Hormuz tankers · Russian strike hits Zaporizhzhia · Solomon Islands pivots from China to Australia</div>
+    <div class="deck">Asia chip rally surges as Dow tops 50,000 · China probes Shanghai chief Chen Jining · Hormuz tankers &amp; Riyadh tower hit</div>
   </header>
 
   <section class="utc-bar">
